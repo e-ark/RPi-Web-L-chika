@@ -10,6 +10,8 @@ exec  2> /tmp/log.$(basename $0)
 # Settings
 PIN=4
 
+gpio -g mode $PIN out
+
 # Exec
 value=$(gpio -g read $PIN)
 date=$(date +"%s")
